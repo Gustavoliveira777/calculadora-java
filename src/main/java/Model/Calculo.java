@@ -1,12 +1,14 @@
-package operacoes;
+package Model;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
+@Builder
 public class Calculo {
     private List<double> numeros;
     private String operacao;
