@@ -10,7 +10,7 @@ import java.util.List;
 @Setter
 @Builder
 public class Calculo {
-    private List<double> numeros;
+    private List<Double> numeros;
     private String operacao;
     private double resultado;
 }
