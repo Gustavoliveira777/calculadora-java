@@ -1,3 +1,4 @@
+import DAO.MongoDAO;
 import controller.CalculadoraCore;
 
 import java.sql.SQLOutput;
@@ -9,7 +10,9 @@ public class Main {
         int opcao = 0;
         Scanner leitura = new Scanner(System.in);
         while(opcao != 11) {
-            System.out.println("Insira um numero; para varios numeros separe por ';'.\nUtilize '.' para separar as casas decimais.");
+            MongoDAO dao = new MongoDAO();
+            dao.buscarUltimo(1);
+            System.out.println("Insira um numero; para varios numeros separe por ';'.\nUtilize '.' para separar as casas decimais.\n Insira 'ANS' para utilizar o ultimo resultado.");
             System.out.print("Numeros > ");
             numeros = leitura.next();
             System.out.println("================\nJavaCalc\n================");
